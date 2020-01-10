@@ -54,9 +54,15 @@ class _HomePageState extends State<HomePage> {
        ),
      ),
       body: ListView.builder(
+        padding: const EdgeInsets.all(8),
         itemCount: widget.items.length,
         itemBuilder: (BuildContext ctx, int index){
-          return Text(widget.items[index].title);
+          return Container(
+            height: 50,
+              child: Text(
+                widget.items[index].title
+              ),
+          );
         },
       ),
     );
